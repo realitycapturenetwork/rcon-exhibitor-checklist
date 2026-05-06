@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R-CON 2026 Exhibitor Checklist</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f2ed;
+    color: #1a1a18;
+    padding: 24px 16px 40px;
+    min-height: 100vh;
+  }
+
+  .wrap { max-width: 620px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    background: #1e1c18;
+    border-radius: 10px 10px 0 0;
+    padding: 24px 28px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c8a96e, #a07c3a);
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #f5f2ed;
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+
+  .logo span { color: #c8a96e; }
+
+  .badge {
+    background: #c8a96e;
+    color: #1e1c18;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .header-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #f5f2ed;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .header-sub {
+    font-size: 11px;
+    color: #9a9488;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* Progress */
+  .progress-bar-wrap {
+    background: #fff;
+    border-left: 1px solid #e0dbd2;
+    border-right: 1px solid #e0dbd2;
+    padding: 16px 28px;
+  }
+
+  .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .progress-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9a9488;
+  }
+
+  .progress-count {
+    font-size: 13px;
+    font-weight: 700;
+    color: #c8a96e;
+  }
+
+  .progress-track {
+    height: 6px;
+    background: #f0ece6;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #c8a96e, #a07c3a);
+    border-radius: 10px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0%;
+  }
+
+  /* Sections */
+  .sections {
+    background: #fff;
+    border: 1px solid #e0dbd2;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+
+  .section { border-bottom: 1px solid #f0ece6; }
+  .section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px 10px;
+    background: #faf8f5;
+    border-bottom: 1px solid #f0ece6;
+  }
+
+  .section-title {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #c8a96e;
+  }
+
+  .section-tally {
+    font-size: 10px;
+    font-weight: 600;
+    color: #9a9488;
+  }
+
+  .section-tally.done { color: #c8a96e; }
+
+  /* Items */
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: background 0.15s;
+    border-bottom: 1px solid #f8f6f3;
+    user-select: none;
+  }
+
+  .item:last-child { border-bottom: none; }
+  .item:hover { background: #fdf9f5; }
+  .item.checked { background: #fefcf8; }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 1.5px solid #d0cbc2;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: #fff;
+  }
+
+  .item.checked .checkbox {
+    background: #c8a96e;
+    border-color: #c8a96e;
+  }
+
+  .checkmark {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .item.checked .checkmark {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .item-text {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #5a574f;
+    line-height: 1.4;
+    transition: color 0.2s;
+  }
+
+  .item.checked .item-text {
+    color: #b0ada6;
+    text-decoration: line-through;
+    text-decoration-color: #d0cbc2;
+  }
+
+  /* Complete banner */
+  .complete-banner {
+    display: none;
+    background: linear-gradient(135deg, #1e1c18, #2a2820);
+    border-radius: 8px;
+    padding: 18px 24px;
+    margin-top: 16px;
+    text-align: center;
+    border: 1px solid #c8a96e;
+  }
+
+  .complete-banner.show { display: block; }
+
+  .complete-banner p {
+    font-size: 13px;
+    font-weight: 700;
+    color: #c8a96e;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .complete-banner small {
+    font-size: 11px;
+    color: #9a9488;
+    font-weight: 500;
+  }
+
+  /* Download button */
+  .download-wrap {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1e1c18;
+    color: #f5f2ed;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 13px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+    border: 1px solid #2e2c28;
+  }
+
+  .btn-download:hover { background: #2a2820; }
+
+  .btn-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: #9a9488;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid #e0dbd2;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: all 0.2s;
+  }
+
+  .btn-reset:hover { border-color: #c8a96e; color: #c8a96e; }
+
+  .footer-note {
+    text-align: center;
+    font-size: 10px;
+    color: #b0ada6;
+    font-weight: 500;
+    margin-top: 14px;
+    letter-spacing: 0.3px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="header-top">
+      <div class="logo">R<span>·</span>CON</div>
+      <div class="badge">Exhibitor Checklist</div>
+    </div>
+    <div class="header-title">Your show prep, start to finish</div>
+    <div class="header-sub">October 12–15, 2026 &nbsp;·&nbsp; Boise Centre, Boise ID</div>
+  </div>
+
+  <div class="progress-bar-wrap">
+    <div class="progress-meta">
+      <span class="progress-label">Progress</span>
+      <span class="progress-count" id="count">0 / 19 complete</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="sections" id="sections">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Before You Arrive</span>
+        <span class="section-tally" id="tally-0">0 / 6</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Complete your exhibitor contract and payment</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Register booth staff passes in the portal</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Book your hotel room block early</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Order A/V, monitor rentals, and drayage through the portal</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Ship booth materials per EventRent freight deadlines</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Brief staff on schedule, demo plan, and lead capture</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Setup Day — October 12</span>
+        <span class="section-tally" id="tally-1">0 / 4</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Check in at the exhibitor desk (move-in 12–6pm)</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Set up booth and test all equipment</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Activate your lead capture tool</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Attend the Welcome Happy Hour (6–10pm)</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Show Days — October 13 &amp; 14</span>
+        <span class="section-tally" id="tally-2">0 / 2</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Staff your booth (Expo Hall 2–5pm)</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Capture leads and attend Exhibitor Happy Hour (5–6pm)</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Final Day — October 15</span>
+        <span class="section-tally" id="tally-3">0 / 3</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Staff your booth (Expo Hall 12–3pm)</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Begin breakdown at 3pm — all booths cleared by 6pm</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Coordinate outbound freight with EventRent</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">After the Event</span>
+        <span class="section-tally" id="tally-4">0 / 2</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Export leads from the portal and follow up</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Share feedback with the R-CON team</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="complete-banner" id="complete-banner">
+    <p>&#10003; &nbsp; You're all set for R-CON 2026!</p>
+    <small>See you in Boise, October 12–15.</small>
+  </div>
+
+  <div class="download-wrap">
+    <a class="btn-download" href="RCON2026_Exhibitor_Checklist.pdf" download>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Download PDF
+    </a>
+    <button class="btn-reset" onclick="resetAll()">
+      <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 5.5A4.5 4.5 0 1 0 5.5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M1 1v4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Reset
+    </button>
+  </div>
+
+  <p class="footer-note">rcon2026.com &nbsp;·&nbsp; Questions? Contact us through the exhibitor portal.</p>
+
+</div>
+
+<script>
+  const TOTALS = [6, 4, 2, 3, 2];
+  const TOTAL = 19;
+
+  function toggle(el) {
+    el.classList.toggle('checked');
+    update();
+  }
+
+  function update() {
+    const all = document.querySelectorAll('.item');
+    const checked = document.querySelectorAll('.item.checked').length;
+
+    document.getElementById('count').textContent = checked + ' / ' + TOTAL + ' complete';
+    document.getElementById('progress-fill').style.width = Math.round((checked / TOTAL) * 100) + '%';
+
+    document.querySelectorAll('.section').forEach((sec, i) => {
+      const items = sec.querySelectorAll('.item');
+      const done = sec.querySelectorAll('.item.checked').length;
+      const tally = document.getElementById('tally-' + i);
+      tally.textContent = done + ' / ' + TOTALS[i];
+      tally.className = 'section-tally' + (done === TOTALS[i] ? ' done' : '');
+    });
+
+    const banner = document.getElementById('complete-banner');
+    if (checked === TOTAL) {
+      banner.classList.add('show');
+    } else {
+      banner.classList.remove('show');
+    }
+  }
+
+  function resetAll() {
+    document.querySelectorAll('.item').forEach(el => el.classList.remove('checked'));
+    update();
+  }
+</script>
+</body>
+</html>
