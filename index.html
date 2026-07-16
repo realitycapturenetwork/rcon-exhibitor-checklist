@@ -10,8 +10,8 @@
 
   body {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    background: #f5f2ed;
-    color: #1a1a18;
+    background: #faf9f6;
+    color: #17211f;
     padding: 24px 16px 40px;
     min-height: 100vh;
   }
@@ -20,7 +20,7 @@
 
   /* Header */
   .header {
-    background: #1e1c18;
+    background: #16211f;
     border-radius: 10px 10px 0 0;
     padding: 24px 28px 20px;
     position: relative;
@@ -32,7 +32,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #c8a96e, #a07c3a);
+    background: linear-gradient(90deg, #6fa8a6, #2b5655);
   }
 
   .header-top {
@@ -45,16 +45,16 @@
   .logo {
     font-size: 32px;
     font-weight: 800;
-    color: #f5f2ed;
+    color: #f2f5f4;
     letter-spacing: 3px;
     line-height: 1;
   }
 
-  .logo span { color: #c8a96e; }
+  .logo span { color: #6fa8a6; }
 
   .badge {
-    background: #c8a96e;
-    color: #1e1c18;
+    background: #376F6E;
+    color: #f2f5f4;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -67,7 +67,7 @@
   .header-title {
     font-size: 15px;
     font-weight: 800;
-    color: #f5f2ed;
+    color: #f2f5f4;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 4px;
@@ -75,7 +75,7 @@
 
   .header-sub {
     font-size: 11px;
-    color: #9a9488;
+    color: #7e8a87;
     font-weight: 500;
     letter-spacing: 0.5px;
   }
@@ -83,8 +83,8 @@
   /* Progress */
   .progress-bar-wrap {
     background: #fff;
-    border-left: 1px solid #e0dbd2;
-    border-right: 1px solid #e0dbd2;
+    border-left: 1px solid #dde4e2;
+    border-right: 1px solid #dde4e2;
     padding: 16px 28px;
   }
 
@@ -100,25 +100,25 @@
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #9a9488;
+    color: #7e8a87;
   }
 
   .progress-count {
     font-size: 13px;
     font-weight: 700;
-    color: #c8a96e;
+    color: #376F6E;
   }
 
   .progress-track {
     height: 6px;
-    background: #f0ece6;
+    background: #eef1f0;
     border-radius: 10px;
     overflow: hidden;
   }
 
   .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #c8a96e, #a07c3a);
+    background: linear-gradient(90deg, #6fa8a6, #2b5655);
     border-radius: 10px;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     width: 0%;
@@ -127,13 +127,13 @@
   /* Sections */
   .sections {
     background: #fff;
-    border: 1px solid #e0dbd2;
+    border: 1px solid #dde4e2;
     border-top: none;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
   }
 
-  .section { border-bottom: 1px solid #f0ece6; }
+  .section { border-bottom: 1px solid #eef1f0; }
   .section:last-child { border-bottom: none; }
 
   .section-header {
@@ -141,8 +141,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 14px 28px 10px;
-    background: #faf8f5;
-    border-bottom: 1px solid #f0ece6;
+    background: #f6f8f7;
+    border-bottom: 1px solid #eef1f0;
   }
 
   .section-title {
@@ -150,16 +150,16 @@
     font-weight: 700;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: #c8a96e;
+    color: #376F6E;
   }
 
   .section-tally {
     font-size: 10px;
     font-weight: 600;
-    color: #9a9488;
+    color: #7e8a87;
   }
 
-  .section-tally.done { color: #c8a96e; }
+  .section-tally.done { color: #376F6E; }
 
   /* Items */
   .item {
@@ -169,19 +169,19 @@
     padding: 12px 28px;
     cursor: pointer;
     transition: background 0.15s;
-    border-bottom: 1px solid #f8f6f3;
+    border-bottom: 1px solid #f2f4f3;
     user-select: none;
   }
 
   .item:last-child { border-bottom: none; }
-  .item:hover { background: #fdf9f5; }
-  .item.checked { background: #fefcf8; }
+  .item:hover { background: #f5f9f8; }
+  .item.checked { background: #f6fbfa; }
 
   .checkbox {
     width: 20px;
     height: 20px;
     min-width: 20px;
-    border: 1.5px solid #d0cbc2;
+    border: 1.5px solid #cdd5d2;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -191,8 +191,8 @@
   }
 
   .item.checked .checkbox {
-    background: #c8a96e;
-    border-color: #c8a96e;
+    background: #376F6E;
+    border-color: #376F6E;
   }
 
   .checkmark {
@@ -209,26 +209,26 @@
   .item-text {
     font-size: 12.5px;
     font-weight: 500;
-    color: #5a574f;
+    color: #55605c;
     line-height: 1.4;
     transition: color 0.2s;
   }
 
   .item.checked .item-text {
-    color: #b0ada6;
+    color: #a7b0ad;
     text-decoration: line-through;
-    text-decoration-color: #d0cbc2;
+    text-decoration-color: #cdd5d2;
   }
 
   /* Complete banner */
   .complete-banner {
     display: none;
-    background: linear-gradient(135deg, #1e1c18, #2a2820);
+    background: linear-gradient(135deg, #16211f, #24322f);
     border-radius: 8px;
     padding: 18px 24px;
     margin-top: 16px;
     text-align: center;
-    border: 1px solid #c8a96e;
+    border: 1px solid #376F6E;
   }
 
   .complete-banner.show { display: block; }
@@ -236,7 +236,7 @@
   .complete-banner p {
     font-size: 13px;
     font-weight: 700;
-    color: #c8a96e;
+    color: #6fa8a6;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 4px;
@@ -244,7 +244,7 @@
 
   .complete-banner small {
     font-size: 11px;
-    color: #9a9488;
+    color: #7e8a87;
     font-weight: 500;
   }
 
@@ -258,8 +258,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #1e1c18;
-    color: #f5f2ed;
+    background: #16211f;
+    color: #f2f5f4;
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-weight: 700;
@@ -269,17 +269,17 @@
     border-radius: 6px;
     text-decoration: none;
     transition: background 0.2s;
-    border: 1px solid #2e2c28;
+    border: 1px solid #24322f;
   }
 
-  .btn-download:hover { background: #2a2820; }
+  .btn-download:hover { background: #24322f; }
 
   .btn-reset {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     background: transparent;
-    color: #9a9488;
+    color: #7e8a87;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     font-weight: 600;
@@ -287,18 +287,18 @@
     text-transform: uppercase;
     padding: 10px 16px;
     border-radius: 6px;
-    border: 1px solid #e0dbd2;
+    border: 1px solid #dde4e2;
     cursor: pointer;
     margin-left: 8px;
     transition: all 0.2s;
   }
 
-  .btn-reset:hover { border-color: #c8a96e; color: #c8a96e; }
+  .btn-reset:hover { border-color: #376F6E; color: #376F6E; }
 
   .footer-note {
     text-align: center;
     font-size: 10px;
-    color: #b0ada6;
+    color: #a7b0ad;
     font-weight: 500;
     margin-top: 14px;
     letter-spacing: 0.3px;
@@ -320,7 +320,7 @@
   <div class="progress-bar-wrap">
     <div class="progress-meta">
       <span class="progress-label">Progress</span>
-      <span class="progress-count" id="count">0 / 19 complete</span>
+      <span class="progress-count" id="count">0 / 21 complete</span>
     </div>
     <div class="progress-track">
       <div class="progress-fill" id="progress-fill"></div>
@@ -332,11 +332,7 @@
     <div class="section">
       <div class="section-header">
         <span class="section-title">Before You Arrive</span>
-        <span class="section-tally" id="tally-0">0 / 6</span>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Complete your exhibitor contract and payment</span>
+        <span class="section-tally" id="tally-0">0 / 5</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -348,26 +344,53 @@
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Order A/V, monitor rentals, and drayage through the portal</span>
+        <span class="item-text">Purchase your lead capture licenses (rates rise on-site)</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Ship booth materials per EventRent freight deadlines</span>
+        <span class="item-text">Order A/V, monitors, and drayage from EventRent via the portal</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Brief staff on schedule, demo plan, and lead capture</span>
+        <span class="item-text">Brief staff on schedule, demo plan, and xTag lead capture</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Shipping &amp; Freight</span>
+        <span class="section-tally" id="tally-1">0 / 5</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Ship to EventRent’s receiving warehouse — the venue accepts no direct freight</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Register inbound &amp; outbound freight on EventRent’s Freight &amp; Handling form before shipping</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Label every box with your company name, booth #, and event; include a BOL</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Inbound receiving window: Oct 5–8 — late arrivals may incur on-site fees</span>
+      </div>
+      <div class="item" onclick="toggle(this)">
+        <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="item-text">Arrange your return carrier + BOL/labels before the show; warehouse pickup Oct 16–20 (leftover items risk storage fees)</span>
       </div>
     </div>
 
     <div class="section">
       <div class="section-header">
         <span class="section-title">Setup Day — October 12</span>
-        <span class="section-tally" id="tally-1">0 / 4</span>
+        <span class="section-tally" id="tally-2">0 / 4</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Check in at the exhibitor desk (move-in 12–6pm)</span>
+        <span class="item-text">Check in at the registration desk (move-in 2–6pm)</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -375,7 +398,7 @@
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Activate your lead capture tool</span>
+        <span class="item-text">Activate your lead capture device</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -386,7 +409,7 @@
     <div class="section">
       <div class="section-header">
         <span class="section-title">Show Days — October 13 &amp; 14</span>
-        <span class="section-tally" id="tally-2">0 / 2</span>
+        <span class="section-tally" id="tally-3">0 / 2</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -394,14 +417,14 @@
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Capture leads and attend Exhibitor Happy Hour (5–6pm)</span>
+        <span class="item-text">Capture leads and attend the Exhibitor Happy Hour each day</span>
       </div>
     </div>
 
     <div class="section">
       <div class="section-header">
         <span class="section-title">Final Day — October 15</span>
-        <span class="section-tally" id="tally-3">0 / 3</span>
+        <span class="section-tally" id="tally-4">0 / 3</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -409,22 +432,22 @@
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Begin breakdown at 3pm — all booths cleared by 6pm</span>
+        <span class="item-text">Begin breakdown at 4pm — all booths cleared by 8pm</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Coordinate outbound freight with EventRent</span>
+        <span class="item-text">Package &amp; label outbound crates and leave them in your booth for EventRent</span>
       </div>
     </div>
 
     <div class="section">
       <div class="section-header">
         <span class="section-title">After the Event</span>
-        <span class="section-tally" id="tally-4">0 / 2</span>
+        <span class="section-tally" id="tally-5">0 / 2</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <span class="item-text">Export leads from the portal and follow up</span>
+        <span class="item-text">Export your leads from xTag and follow up</span>
       </div>
       <div class="item" onclick="toggle(this)">
         <div class="checkbox"><svg class="checkmark" width="11" height="9" viewBox="0 0 11 9" fill="none"><path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -441,7 +464,7 @@
 
   <div class="download-wrap">
     <a class="btn-download" href="RCON2026_Exhibitor_Checklist.pdf" download>
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="#6fa8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Download PDF
     </a>
     <button class="btn-reset" onclick="resetAll()">
@@ -455,41 +478,46 @@
 </div>
 
 <script>
-  const TOTALS = [6, 4, 2, 3, 2];
-  const TOTAL = 19;
+  const TOTALS = [5, 5, 4, 2, 3, 2];
+  const TOTAL = 21;
+  const STORAGE_KEY = 'rcon-exhibitor-checklist-v1';
 
-  function toggle(el) {
-    el.classList.toggle('checked');
-    update();
+  function keyOf(el) { return el.querySelector('.item-text').textContent.trim(); }
+
+  function save() {
+    const state = {};
+    document.querySelectorAll('.item').forEach(el => { if (el.classList.contains('checked')) state[keyOf(el)] = true; });
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
   }
 
-  function update() {
-    const all = document.querySelectorAll('.item');
-    const checked = document.querySelectorAll('.item.checked').length;
+  function load() {
+    let state = {};
+    try { state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) {}
+    document.querySelectorAll('.item').forEach(el => { if (state[keyOf(el)]) el.classList.add('checked'); });
+  }
 
+  function toggle(el) { el.classList.toggle('checked'); update(); save(); }
+
+  function update() {
+    const checked = document.querySelectorAll('.item.checked').length;
     document.getElementById('count').textContent = checked + ' / ' + TOTAL + ' complete';
     document.getElementById('progress-fill').style.width = Math.round((checked / TOTAL) * 100) + '%';
-
     document.querySelectorAll('.section').forEach((sec, i) => {
-      const items = sec.querySelectorAll('.item');
       const done = sec.querySelectorAll('.item.checked').length;
       const tally = document.getElementById('tally-' + i);
       tally.textContent = done + ' / ' + TOTALS[i];
       tally.className = 'section-tally' + (done === TOTALS[i] ? ' done' : '');
     });
-
-    const banner = document.getElementById('complete-banner');
-    if (checked === TOTAL) {
-      banner.classList.add('show');
-    } else {
-      banner.classList.remove('show');
-    }
+    document.getElementById('complete-banner').classList.toggle('show', checked === TOTAL);
   }
 
   function resetAll() {
     document.querySelectorAll('.item').forEach(el => el.classList.remove('checked'));
-    update();
+    update(); save();
   }
+
+  load();
+  update();
 </script>
 </body>
 </html>
